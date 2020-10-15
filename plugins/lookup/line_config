@@ -1,0 +1,10 @@
+delete firewall family inet filter V4-LOOPBACK term TELNET
+delete firewall family inet filter V4-LOOPBACK term SSH
+delete firewall family inet filter V4-LOOPBACK term NTP
+delete firewall family inet filter V4-LOOPBACK term SNMP
+delete firewall family inet filter V4-LOOPBACK term VRRP
+delete firewall family inet filter V4-LOOPBACK term BGP
+delete firewall family inet filter V4-LOOPBACK term ICMP
+delete firewall family inet filter V4-LOOPBACK term LOOPBACK
+delete firewall family inet filter V4-LOOPBACK term ESTABLISHED-TCP
+delete firewall family inet filter V4-LOOPBACK term DENY-ALL

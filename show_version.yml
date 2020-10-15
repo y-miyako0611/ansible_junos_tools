@@ -1,0 +1,10 @@
+---
+- name: Show Version TEST
+  hosts: junos
+  gather_facts: no
+  tasks:
+    - name: show version
+      junos_command:
+        commands: show version
+        display: json
+ 

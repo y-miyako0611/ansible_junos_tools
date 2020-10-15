@@ -1,0 +1,22 @@
+- name: 'NW機器の機器情報取得'
+  hosts: junos
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: 'NW機器の機器情報取得/junos'
+      telnet:
+        user: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        login_prompt: 'login: '
+        password_prompt: 'Password:'
+        prompts:
+          - "[>|#]|Password:|password:"
+        command:
+          - set cli screen-length 0
+          - show version
+      changed_when: False
+      register: command_result
+
+    - name: 'NW機器の機器情報取得/debug'
+      debug:
+        var: command_result.output

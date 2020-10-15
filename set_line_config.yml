@@ -1,0 +1,8 @@
+---
+- hosts: junos
+  gather_facts: false
+  tasks:
+    - name: config test
+      cli_config:
+        config: "{{ lookup('file', 'line_config.txt') }}"
+
