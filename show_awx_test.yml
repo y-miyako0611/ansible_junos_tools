@@ -1,6 +1,5 @@
 ---
 - name: "aws でshowコマンドのテスト"
-  hosts: tke
   gather_facts: false
   tasks:
     - name: "show version"
