@@ -1,5 +1,6 @@
 ---
 - name: "aws でshowコマンドのテスト"
+  hosts: all
   gather_facts: false
   tasks:
     - name: "show version"
