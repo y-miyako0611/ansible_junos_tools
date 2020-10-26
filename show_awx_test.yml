@@ -1,6 +1,6 @@
 ---
 - name: "aws でshowコマンドのテスト"
-  hosts: all
+  hosts: "{{ vsrx_host }}"
   gather_facts: false
   tasks:
     - name: "show version"
