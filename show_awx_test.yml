@@ -8,20 +8,20 @@
         commands: "{{ private_cmd_1 }}"
       register: results
 
-    - name: "show version 結果表示"
+    - name: "{{ private_cmd_1 }}  結果表示"
       debug:
         msg: "{{ results.stdout_lines[0] }}"
 
-    - name: "show configration"
+    - name: "{{ private_cmd_2 }} の確認"
       junos_command:
         commands: "{{ private_cmd_2 }}"
       register: results2
 
-    - name: "show configration 結果表示"
+    - name: "{{ private_cmd_2 }} 結果表示"
       debug:
         msg: "{{ results2.stdout_lines[0] }}"
 
-    - name: "show chassis hardware"
+    - name: "{{ private_cmd_3 }} の確認"
       junos_command:
         commands: "{{ private_cmd_3 }}"
       register: results3
