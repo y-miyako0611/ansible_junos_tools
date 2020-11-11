@@ -14,7 +14,7 @@
 
     - name: "{{ private_cmd_2 }} 確認"
       junos_command:
-        commands: "{{ private_cmd_2 }}"
+        commands: "{{ private_cmd_2 }} version"
       register: results2
 
     - name: "{{ private_cmd_2 }} 結果表示"
