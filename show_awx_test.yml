@@ -5,7 +5,7 @@
   tasks:
     - name: "{{ private_cmd_1 }} 確認"
       junos_command:
-        commands: "{{ private_cmd_1 }}" | {{ grep_para }}"
+        commands: "{{ private_cmd_1 }} | {{ grep_para }}"
       register: results
 
     - name: "{{ private_cmd_1 }}  結果表示"
