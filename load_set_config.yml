@@ -1,6 +1,6 @@
 ---
 - name: "vsrxにコンフィグを投入するプレイブック"
-  hosts: tke
+  hosts: "{{ vsrx_host }}"
   gather_facts: false
   tasks:
     - name: "vsrxにコンフィグを投入"
