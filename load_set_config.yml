@@ -1,0 +1,8 @@
+---
+- name: "vsrxにコンフィグを投入するプレイブック"
+  hosts: tke
+  gather_facts: false
+  tasks:
+    - name: "vsrxにコンフィグを投入"
+      cli_config:
+        config: "load set {{ config_url }}"
