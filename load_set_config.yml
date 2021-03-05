@@ -6,12 +6,3 @@
     - name: "vsrxにコンフィグを投入"
       cli_config:
         config: "load set {{ config_url }}"
-        
-- name: confirm
-  pause: prompt="このまま進めて良いですか？ (y/n)"
-  register: yn
-
-- name: abort
-  fail: msg="Aborted!!"
-  when: yn.user_input != 'y'
-  run_once: true
